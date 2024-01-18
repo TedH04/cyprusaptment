@@ -1,0 +1,84 @@
+.intro {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh;
+  text-align: center; 
+  background: #e5e5e5 url('../images/Utomhus.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative; 
+}
+
+.intro .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro h1 {
+  font-family: "Raleway", sans-serif;
+  color: #ffd700; 
+  font-size: 82px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.intro h1 span {
+  color: #5ca9fb;
+}
+
+.intro p {
+  color: #ffffff; 
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.intro .container {
+  position: relative; 
+  z-index: 2; 
+}
+
+.intro .row {
+  display: flex;
+  justify-content: center; 
+}
+
+.intro .intro-text {
+  padding: 0;
+  margin: 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  height: 100%; 
+}
+
+.btn-custom.btn-lg.page-scroll {
+  margin-top: 20px; 
+  color: #ffffff; 
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.btn-custom.btn-lg.page-scroll {
+  display: inline-block;
+  margin: 20px auto; 
+}
