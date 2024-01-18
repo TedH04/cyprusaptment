@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Header as SemanticHeader, Button } from 'semantic-ui-react';
+import { Container, Header as SemanticHeader } from 'semantic-ui-react';
 import './styling/header.css';
 
 export const Header = () => {
