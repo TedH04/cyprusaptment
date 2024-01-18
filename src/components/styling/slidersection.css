@@ -24,7 +24,7 @@
     background-size: cover;
     background-position: center;
   }
-  
+
   .each-slide span {
     padding: 20px;
     font-size: 1.5em;
@@ -34,3 +34,17 @@
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
   }
   
+  /* Styles for the Modal Image */
+.modal-image {
+    max-width: 100%;    /* Maximum width is the width of the viewport */
+    max-height: 80vh;   /* Maximum height is 80% of the viewport height */
+    object-fit: contain; /* Ensures the image aspect ratio is preserved */
+  }
+  
+  /* Additional styling for the Modal */
+  .ui.modal > .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Allows scrolling if needed */
+  }

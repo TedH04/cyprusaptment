@@ -1,6 +1,9 @@
 import './App.css'
 import { Header } from './components/header'
 import { Slidersection } from './components/slidersection'
+import { ApartmentDesc } from './components/apartmentDesc'
+import { ContactPage } from './components/contactPage'
+import 'semantic-ui-css/semantic.min.css'
 
 function App() {
   return (
@@ -8,6 +11,8 @@ function App() {
       <header className="App-header">
         <Header />
         <Slidersection />
+        <ApartmentDesc />
+        <ContactPage />
       </header>
     </div>
   )

@@ -1,0 +1,7 @@
+
+/* For responsive design */
+@media (max-width: 768px) {
+  .container, .text-box {
+    padding: 10px;
+  }
+}
