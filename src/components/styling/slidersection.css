@@ -1,106 +1,70 @@
-.slide-container {
-    width: 100%;
-    margin: auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .each-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    height: 450px; /* Adjust height as needed */
-  }
-  
-  .each-slide div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  
-  .each-slide span {
-    padding: 20px;
-    font-size: 1.5em;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border-radius: 5px;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
-  }
-  
-  /* Styles for the Modal Image */
-.modal-image {
-    max-width: 100%;    /* Maximum width is the width of the viewport */
-    max-height: 80vh;   /* Maximum height is 80% of the viewport height */
-    object-fit: contain; /* Ensures the image aspect ratio is preserved */
-  }
-  
-  /* Additional styling for the Modal */
-  .ui.modal > .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto; /* Allows scrolling if needed */
-  }
-  .text-box {
-    padding: 2rem; /* Ample padding for a spacious feel */
-    text-align: center; /* Center-align the text */
-    background-color: #f9f9f9; /* A soft background color for elegance */
-    color: #333; /* A color that stands out but isn't harsh */
-    font-family: 'Helvetica Neue', 'Arial', sans-serif; /* A modern font stack */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
-    border-radius: 10px; /* Rounded corners for a modern look */
-    margin: 1rem 0; /* Space around the box */
-    transition: all 0.3s ease-in-out; /* Smooth transition for interactions */
+body {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* AppBar styles */
+.MuiAppBar-root {
+  background-color: #212121; /* Dark theme for the AppBar */
+}
+
+/* Card styles */
+.MuiCard-root {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.MuiCard-root:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography styles */
+.MuiTypography-h5 {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Dialog Image styles */
+img {
+  object-fit: cover;
+}
+
+/* Additional styling for the Carousel */
+.MuiCard-root {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.MuiCard-root:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-card {
+  max-width: 600px; /* Maximum width of the image */
+  margin: auto; /* Center the card in the carousel */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-image {
+  width: 100%; /* Make image width responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 90vh; /* Maximum height of the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .MuiTypography-h5 {
+    font-size: 1.2rem; /* Slightly smaller font on mobile */
   }
 
-  .slide-container, .text-box {
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  .MuiCard-root {
+    margin: 8px; /* Smaller margins on mobile */
   }
-  
-  /* This part is important for the 'alive' feel on scroll - it's better handled with JavaScript but here's a CSS-only approach */
-  .slide-container:hover, .text-box:hover {
-    transform: translateY(-10px); /* Elements rise up slightly */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Shadow becomes more pronounced */
+  .carousel-card {
+    max-width: 100%; /* Allow full width on mobile */
   }
-  
-  /* Centering the text box and the slide section */
-  .ui.grid > .row {
-    justify-content: center; /* Center the grid items */
+
+  .carousel-image {
+    max-height: none; /* Remove max height constraint on mobile */
   }
-  
-  /* Ensures that the slide container is centered and has some margin to separate it from the text box */
-  .slide-container {
-    margin: 1rem 0; /* Consistent space around the slide container */
-  }
-  
-  .text-box p {
-    margin: 0; /* Remove default paragraph margin */
-    font-size: 1.25rem; /* Slightly larger font size */
-    line-height: 1.6; /* Improve line spacing for readability */
-    color: #555; /* Soften the text color */
-  }
-  
-  /* Hover effect to lift the box slightly */
-  .text-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Responsive media query for smaller screens */
-  @media screen and (max-width: 768px) {
-    .text-box {
-      margin-bottom: 1.5rem; /* Add some space below the text box */
-    }
-  }
-  
+}
