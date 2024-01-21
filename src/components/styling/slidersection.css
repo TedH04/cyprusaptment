@@ -49,17 +49,58 @@
     align-items: center;
     overflow-y: auto; /* Allows scrolling if needed */
   }
+  .text-box {
+    padding: 2rem; /* Ample padding for a spacious feel */
+    text-align: center; /* Center-align the text */
+    background-color: #f9f9f9; /* A soft background color for elegance */
+    color: #333; /* A color that stands out but isn't harsh */
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; /* A modern font stack */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    margin: 1rem 0; /* Space around the box */
+    transition: all 0.3s ease-in-out; /* Smooth transition for interactions */
+  }
 
+  .slide-container, .text-box {
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  /* This part is important for the 'alive' feel on scroll - it's better handled with JavaScript but here's a CSS-only approach */
+  .slide-container:hover, .text-box:hover {
+    transform: translateY(-10px); /* Elements rise up slightly */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Shadow becomes more pronounced */
+  }
+  
+  /* Centering the text box and the slide section */
+  .ui.grid > .row {
+    justify-content: center; /* Center the grid items */
+  }
+  
+  /* Ensures that the slide container is centered and has some margin to separate it from the text box */
+  .slide-container {
+    margin: 1rem 0; /* Consistent space around the slide container */
+  }
+  
+  .text-box p {
+    margin: 0; /* Remove default paragraph margin */
+    font-size: 1.25rem; /* Slightly larger font size */
+    line-height: 1.6; /* Improve line spacing for readability */
+    color: #555; /* Soften the text color */
+  }
+  
+  /* Hover effect to lift the box slightly */
+  .text-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Responsive media query for smaller screens */
   @media screen and (max-width: 768px) {
-    .ui.grid > .row {
-      flex-direction: column-reverse; /* Stack items vertically */
-    }
-  
-    .ui.grid > .row > .column {
-      width: 100% !important; /* Full width for each column */
-    }
-  
     .text-box {
-      margin-top: 20px; /* Add some space above the text box */
+      margin-bottom: 1.5rem; /* Add some space below the text box */
     }
   }
+  

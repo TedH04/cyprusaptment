@@ -6,8 +6,8 @@ export const ContactPage = () => {
   return (
     <Container className="contact-page">
       <SemanticHeader as='h2'>Contact Information</SemanticHeader>
-      <p>Name: John Doe</p>
-      <p>Email: johndoe@example.com</p>
+      <p>Name: Natasa Sillén</p>
+      <p>Email: Natasasillen@gmail.com</p>
     </Container>
   );
 };

@@ -70,6 +70,11 @@ export const SliderSection = () => {
       <Grid container stackable>
         {/* Inside Images */}
         <Grid.Row>
+        <Grid.Column width={8}>
+            <Segment className="text-box">
+              <p>This is what it looks like inside.</p>
+            </Segment>
+          </Grid.Column>
           <Grid.Column width={8}>
             <div className="slide-container">
               <Fade>
@@ -80,11 +85,6 @@ export const SliderSection = () => {
                 ))}
               </Fade>
             </div>
-          </Grid.Column>
-          <Grid.Column width={8}>
-            <Segment className="text-box">
-              <p>This is what it looks like inside.</p>
-            </Segment>
           </Grid.Column>
         </Grid.Row>
         
