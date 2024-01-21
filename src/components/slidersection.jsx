@@ -64,6 +64,7 @@ export const SliderSection = () => {
     setOpen(true);
   };
 
+  
   return (
     <div>
       <Grid container stackable>
