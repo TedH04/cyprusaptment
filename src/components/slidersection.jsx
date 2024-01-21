@@ -55,7 +55,7 @@ const outsideImages = [
   },
 ];
 
-export const Slidersection = () => {
+export const SliderSection = () => {
   const [open, setOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState('');
 

@@ -6,11 +6,14 @@ export const Header = () => {
   return (
     <header id="header" className="intro">
       <div className="overlay">
-        <Container textAlign="center" className="textsContainer">
-          <SemanticHeader as='h1' inverted>
-            Hotel i Cypern Här
-          </SemanticHeader>
-          <p className="intro-text">Jo vårt hotell i Cypern här</p>
+        <Container className="header-content">
+          <div className="upper-left-text">Hotels Selection</div>
+          <div className="textsContainer">
+            <p className="intro-text">A Great Place To Stay</p>
+            <SemanticHeader as='h1' inverted>
+              Welcome to our Apartment Hotel Resort
+            </SemanticHeader>
+          </div>
         </Container>
       </div>
     </header>

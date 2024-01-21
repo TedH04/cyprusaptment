@@ -49,3 +49,17 @@
     align-items: center;
     overflow-y: auto; /* Allows scrolling if needed */
   }
+
+  @media screen and (max-width: 768px) {
+    .ui.grid > .row {
+      flex-direction: column-reverse; /* Stack items vertically */
+    }
+  
+    .ui.grid > .row > .column {
+      width: 100% !important; /* Full width for each column */
+    }
+  
+    .text-box {
+      margin-top: 20px; /* Add some space above the text box */
+    }
+  }
