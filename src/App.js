@@ -1,6 +1,6 @@
 import './App.css'
 import { Header } from './components/header'
-import { SliderSection } from './components/sliderSection'
+import { SliderSection } from './components/slidersection'
 import { ApartmentDesc } from './components/apartmentDesc'
 import { ContactPage } from './components/contactPage'
 import 'semantic-ui-css/semantic.min.css'
