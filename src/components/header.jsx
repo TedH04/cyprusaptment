@@ -11,7 +11,7 @@ export const Header = () => {
           <div className="textsContainer">
             <p className="intro-text">A Great Place To Stay</p>
             <SemanticHeader as='h1' inverted>
-              Welcome to our Apartment Hotel Resort
+              Welcome to our Dream Place in North Cyprus
             </SemanticHeader>
           </div>
         </Container>
