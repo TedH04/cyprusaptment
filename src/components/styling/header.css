@@ -40,7 +40,6 @@
   font-size: 1.2rem;
 }
 
-/* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .intro h1 {
     font-size: 2rem;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Grid, Typography, Card, Dialog, AppBar, Toolbar, IconButton, useMediaQuery } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Carousel from 'react-material-ui-carousel';
-import { useTheme } from '@mui/material/styles'; // Ensuring single import of useTheme
+import { useTheme } from '@mui/material/styles';
 import './styling/slidersection.css';
 import balconyview from './images/imgslider/balconyview.jpeg'
 import bedroomdaysmall from './images/imgslider/bedroomdaysmall.jpeg'

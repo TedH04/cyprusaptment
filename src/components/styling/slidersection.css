@@ -2,12 +2,10 @@ body {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 
-/* AppBar styles */
 .MuiAppBar-root {
-  background-color: #212121; /* Dark theme for the AppBar */
+  background-color: #212121; 
 }
 
-/* Card styles */
 .MuiCard-root {
   cursor: pointer;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -18,18 +16,15 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Typography styles */
 .MuiTypography-h5 {
   color: #333;
   margin-bottom: 16px;
 }
 
-/* Dialog Image styles */
 img {
   object-fit: cover;
 }
 
-/* Additional styling for the Carousel */
 .MuiCard-root {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease-in-out;
@@ -40,31 +35,30 @@ img {
 }
 
 .carousel-card {
-  max-width: 600px; /* Maximum width of the image */
-  margin: auto; /* Center the card in the carousel */
+  max-width: 600px; 
+  margin: auto; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-image {
-  width: 100%; /* Make image width responsive */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 90vh; /* Maximum height of the image */
+  width: 100%; 
+  height: auto;
+  max-height: 90vh;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .MuiTypography-h5 {
-    font-size: 1.2rem; /* Slightly smaller font on mobile */
+    font-size: 1.2rem; 
   }
 
   .MuiCard-root {
-    margin: 8px; /* Smaller margins on mobile */
+    margin: 8px; 
   }
   .carousel-card {
-    max-width: 100%; /* Allow full width on mobile */
+    max-width: 100%; 
   }
 
   .carousel-image {
-    max-height: none; /* Remove max height constraint on mobile */
+    max-height: none;
   }
 }

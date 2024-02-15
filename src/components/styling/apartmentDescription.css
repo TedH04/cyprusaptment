@@ -10,7 +10,6 @@
   margin-top: 0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .apartment-description {
     padding: 1rem;
