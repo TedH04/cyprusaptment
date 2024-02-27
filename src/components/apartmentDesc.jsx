@@ -9,4 +9,5 @@ export const ApartmentDesc = () => {
       <p>Great apartment for rent in a great new area with the sea nearby and a beautiful pool</p>
     </Container>
   );
+  
 };
