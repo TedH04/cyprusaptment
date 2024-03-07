@@ -1,64 +1,60 @@
 body {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.MuiAppBar-root {
-  background-color: #212121; 
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.MuiCard-root {
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.MuiCard-root:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.MuiTypography-h5 {
-  color: #333;
-  margin-bottom: 16px;
-}
-
-img {
-  object-fit: cover;
-}
-
-.MuiCard-root {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.MuiCard-root:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.typography-h5 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
 }
 
 .carousel-card {
-  max-width: 600px; 
-  margin: auto; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: none;
 }
 
 .carousel-image {
-  width: 100%; 
-  height: auto;
-  max-height: 90vh;
+  max-width: 100%; 
+  max-height: 60vh; 
+  object-fit: contain; 
+}
+
+.modal-carousel-image {
+  display: block; 
+  max-width: 100%; 
+  max-height: 80vh;
+  object-fit: contain; 
+  margin: auto;
+}
+
+.dialog-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
-  .MuiTypography-h5 {
-    font-size: 1.2rem; 
-  }
-
-  .MuiCard-root {
-    margin: 8px; 
-  }
   .carousel-card {
-    max-width: 100%; 
+    width: 100%; 
   }
-
-  .carousel-image {
-    max-height: none;
+  .typography-h5 {
+    font-size: 1.2rem;
   }
 }
