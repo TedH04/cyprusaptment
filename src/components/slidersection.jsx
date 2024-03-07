@@ -52,11 +52,11 @@ export const SliderSection = () => {
     setOpen(!open);
   };
 
-  const renderCarouselItem = (item, index, set) => (
+  /*const renderCarouselItem = (item, index, set) => (
     <Card onClick={(event) => showImage(event, index, set)} className="carousel-card">
       <img src={item.url} alt={item.caption} className="carousel-image" />
     </Card>
-  );
+  );*/
 
   return (
     <div>
