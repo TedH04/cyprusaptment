@@ -42,17 +42,19 @@
 
 @media screen and (max-width: 768px) {
   .intro {
-    background-size: contain; /* Changes from 'cover' to 'contain' */
-    background-position: center; /* Keeps the image centered */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 50vh; /* Adjust the height as needed for your design */
+    background-size: cover;
+    background-size: 180vw auto;
+    min-height: 100vh;
+    background-position: top center;
+    height: auto;
+    min-height: 50vh;
   }
   
   .intro h1 {
-    font-size: 2rem; /* Adjusts headline size for smaller screens */
+    font-size: 2rem;
   }
   
   .upper-left-text {
-    font-size: 1rem; /* Adjusts text size for smaller screens */
+    font-size: 1rem;
   }
 }
