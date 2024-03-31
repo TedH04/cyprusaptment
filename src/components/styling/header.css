@@ -41,10 +41,18 @@
 }
 
 @media screen and (max-width: 768px) {
-  .intro h1 {
-    font-size: 2rem;
+  .intro {
+    background-size: contain; /* Changes from 'cover' to 'contain' */
+    background-position: center; /* Keeps the image centered */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 50vh; /* Adjust the height as needed for your design */
   }
+  
+  .intro h1 {
+    font-size: 2rem; /* Adjusts headline size for smaller screens */
+  }
+  
   .upper-left-text {
-    font-size: 1rem;
+    font-size: 1rem; /* Adjusts text size for smaller screens */
   }
 }
