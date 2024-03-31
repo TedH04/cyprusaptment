@@ -63,7 +63,7 @@ body {
   }
 
   .carousel-image, .modal-carousel-image {
-    max-height: 80vh;
+    max-height: 32vh;
     object-fit: contain; 
     width: auto; 
     margin: auto; 
