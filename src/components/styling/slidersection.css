@@ -52,18 +52,17 @@ body {
 
 @media (max-width: 768px) {
   .carousel-card {
-    width: 100%; /* Ensures that the card takes the full width */
+    width: 100%;
   }
 
   .typography-h5 {
-    font-size: 1.2rem; /* Adjusts the font size for mobile */
+    font-size: 1.2rem; 
   }
 
-  /* Set a fixed height for images in the carousel on mobile devices */
   .carousel-image, .modal-carousel-image {
-    height: 300px; /* Example fixed height, adjust as needed */
-    width: auto; /* Maintain aspect ratio */
+    height: 300px; 
+    width: auto;
     object-fit: contain;
-    max-width: 100%; /* Ensure image does not exceed the screen width */
+    max-width: 100%;
   }
 }
