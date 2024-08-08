@@ -3,11 +3,14 @@ import { Grid, Typography, Card, Dialog, useMediaQuery } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import { useTheme } from '@mui/material/styles';
 import './styling/slidersection.css';
-import balconyview from './images/imgslider/balconyview.jpeg';
-import bedroomdaysmall from './images/imgslider/bedroomdaysmall.jpeg';
-import kitchen from './images/imgslider/kitchen.jpeg';
-import outsidebalconyview from './images/imgslider/outsidebalconyview.jpeg';
-import bedroomsunrise from './images/imgslider/bedroomsunrise.jpeg';
+import Balcony from './images/imgslider/Apartment/Balcony.jpeg';
+import Bed from './images/imgslider/Apartment/Bed.jpeg';
+import Bathroom from './images/imgslider/Apartment/Bathroom.jpeg';
+import HallwayBedroom from './images/imgslider/Apartment/HallwayBedroom.jpeg';
+import LivingroomBed from './images/imgslider/Apartment/LivingroomBed.jpeg';
+import KitchenAppliances from './images/imgslider/Apartment/KitchenAppliances.jpeg';
+import LivingroomBalcony from './images/imgslider/Apartment/LivingroomBalcony.jpeg';
+import Kitchen from './images/imgslider/Apartment/Kitchen.jpeg';
 import sunsetocean from './images/imgslider/sunsetocean.jpeg';
 import balconyviewsunset from './images/imgslider/balconyviewsunset.jpeg';
 import poolsidesunset from './images/imgslider/poolsidesunset.jpeg';
@@ -17,11 +20,14 @@ import closebyfacilitiesbungaloos from './images/imgslider/closebyfacilitiesbung
 import cafeparis from './images/imgslider/cafeparis.jpeg';
 
 const insideImages = [
-  { url: balconyview, caption: 'Balcony View' },
-  { url: bedroomdaysmall, caption: 'Cozy Bedroom' },
-  { url: kitchen, caption: 'Modern Kitchen' },
-  { url: outsidebalconyview, caption: 'Outside View' },
-  { url: bedroomsunrise, caption: 'Bedroom at Sunrise' },
+  { url: Balcony, caption: 'Balcony View' },
+  { url: LivingroomBalcony, caption: 'Outside View' },
+  { url: Bed, caption: 'Cozy Bedroom' },
+  { url: Kitchen, caption: 'Modern Kitchen' },
+  { url: LivingroomBed, caption: 'Bedroom at Sunrise' },
+  { url: HallwayBedroom, caption: 'HallwayBedroom' },
+  {url: KitchenAppliances, caption: 'Kitchen Appliances'},
+  { url: Bathroom, caption: 'Bathroom' },
 ];
 
 const outsideImages = [
@@ -104,12 +110,7 @@ export const SliderSection = () => {
           autoPlay={false}
           index={currentIndex}
           navButtonsAlwaysVisible
-          fullHeightHover={false}
           navButtonsProps={{
-            style: {
-              backgroundColor: 'transparent',
-              borderRadius: 0,
-            },
           }}
         >
           {(currentSet === 'inside' ? insideImages : outsideImages).map((item, i) => (
@@ -118,7 +119,6 @@ export const SliderSection = () => {
               src={item.url}
               alt={item.caption}
               className="modal-carousel-image"
-              style={{ maxHeight: '80vh' }}
               onClick={toggleDialog}
             />
           ))}
