@@ -13,9 +13,7 @@ import { useTheme } from '@mui/material/styles';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import './styling/contactPage.css';
-import { Subscriptions, YouTube, YoutubeSearchedFor } from '@mui/icons-material';
 
 export const ContactPage = () => {
   const theme = useTheme();
