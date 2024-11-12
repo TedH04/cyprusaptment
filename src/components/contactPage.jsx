@@ -18,6 +18,7 @@ import './styling/contactPage.css';
 export const ContactPage = () => {
   const theme = useTheme();
 
+  
   return (
     <footer
       style={{
