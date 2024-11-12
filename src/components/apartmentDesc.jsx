@@ -1,5 +1,3 @@
-// ApartmentDesc.jsx
-
 import React from "react";
 import {
   Container,
@@ -8,9 +6,7 @@ import {
   CardContent,
   Box,
   Divider,
-  useMediaQuery,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import FacilitiesList from './helper/FacilitiesList';
 import DistancesList from './helper/DistancesList';
 import PricesList from './helper/PricesList';
@@ -21,8 +17,6 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import './styling/apartmentDescription.css';
 
 export const ApartmentDesc = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Container maxWidth="md" className="apartment-description">
@@ -36,7 +30,6 @@ export const ApartmentDesc = () => {
         Vår dröm har blivit sann och vi delar gärna med oss av den… VÅR UNDERBARA lägenhet på Norra Cypern.
       </Typography>
 
-      {/* Plats & Område */}
       <Card className="description-card">
         <CardContent>
           <Box display="flex" alignItems="center" mb={2}>
@@ -49,12 +42,11 @@ export const ApartmentDesc = () => {
             Lägenheten ligger i området Esentepe som är öster om den omtyckta hamnstaden Kyrenia, längs med öns norra kust, 500 m från stranden.
           </Typography>
           <Typography variant="body1" paragraph>
-            Den är i ett community "SUN VALLEY" och ligger i området ”Cove Garden”, bestående av 92 lägenheter i 4 block, och vår ligger i block C, varav det är 30 lägenheter och ligger på våningsplan 1.
+            Den är i ett community "SUN VALLEY" och ligger i området ”Cove Garden”, bestående av 92 lägenheter i 4 block. Vår lägenhet ligger i block C, som består av 30 lägenheter, på våningsplan 1.
           </Typography>
         </CardContent>
       </Card>
 
-      {/* Faciliteter & Bekvämligheter */}
       <Card className="description-card">
         <CardContent>
           <Box display="flex" alignItems="center" mb={2}>
@@ -64,23 +56,25 @@ export const ApartmentDesc = () => {
             </Typography>
           </Box>
           <Typography variant="body1" paragraph>
-            Det är en studio på ca 40 kvm med kök och ett rymligt badrum med dusch. Den är möblerad med en dubbelsäng som är 160 cm, en bäddsoffa 140 cm. Lämplig för 2 vuxna + 2 barn, alt 3 vuxna.
+            Studion är ca 40 kvm med kök och ett rymligt badrum med dusch. Den är möblerad med en dubbelsäng (160 cm) och en bäddsoffa (140 cm), lämplig för 2 vuxna och 2 barn eller 3 vuxna.
           </Typography>
           <Typography variant="body1" paragraph>
-            Kök: Ingår all köksutrustning såsom brödrost, vattenkokare, mixer m.m.
+            Kök: All köksutrustning ingår, såsom brödrost, vattenkokare, mixer m.m.
           </Typography>
           <Typography variant="body1" paragraph>
-            Toalett: Schampo, balsam, tvål, handdukar tom strandhanddukar ingår.
+            Toalett: Schampo, balsam, tvål och handdukar, inklusive strandhanddukar, ingår.
           </Typography>
           <Typography variant="body1" paragraph>
-            En våning upp finns det en takterrass på ca 800 kvm med solsängar som ni får utnyttja när den blir klar. Utsikten är magisk! Det kommer även att finnas ett café med lättare förtäring.
+            En våning upp finns en takterrass på ca 800 kvm med solsängar som ni får utnyttja när den blir klar. Utsikten är magisk! Det kommer även att finnas ett café med lättare förtäring.
           </Typography>
           <Divider style={{ margin: '16px 0' }} />
+          <Typography variant="h6" component="h4" gutterBottom>
+            Faciliteter i området:
+          </Typography>
           <FacilitiesList />
         </CardContent>
       </Card>
 
-      {/* Avstånd och Utflyktstips */}
       <Card className="description-card">
         <CardContent>
           <Box display="flex" alignItems="center" mb={2}>
@@ -89,12 +83,15 @@ export const ApartmentDesc = () => {
               Avstånd och Utflyktstips
             </Typography>
           </Box>
+          <Typography variant="body1" paragraph>
+            Här är några avstånd och viktiga platser i närheten:
+          </Typography>
           <DistancesList />
           <Typography variant="body1" paragraph>
-            ✈️ Vi flyger oftast till Larnaca med Norwegian eller Eurowings. Går även att flyga till Ercan med Pegasus.
+            ✈️ Vi flyger oftast till Larnaca med Norwegian eller Eurowings. Det går även att flyga till Ercan med Pegasus.
           </Typography>
           <Typography variant="body1" paragraph>
-            *Rekommenderar att hyra bil, från ca 280/dag. Kan skilja från säsongen.
+            *Vi rekommenderar att hyra bil, från ca 280 kr/dag. Priser kan variera beroende på säsong.
           </Typography>
           <Typography variant="body1" paragraph>
             Vi hjälper gärna till med transfer och bilhyrning.
@@ -102,7 +99,6 @@ export const ApartmentDesc = () => {
         </CardContent>
       </Card>
 
-      {/* Priser & Rekommendationer */}
       <Card className="description-card">
         <CardContent>
           <Box display="flex" alignItems="center" mb={2}>
@@ -111,6 +107,9 @@ export const ApartmentDesc = () => {
               Priser & Rekommendationer
             </Typography>
           </Box>
+          <Typography variant="body1" paragraph>
+            Här är våra aktuella priser:
+          </Typography>
           <PricesList />
           <Typography variant="body1" paragraph>
             El ingår vid normal förbrukning.

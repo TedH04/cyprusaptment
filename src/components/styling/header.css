@@ -1,13 +1,9 @@
-/* header.css */
-
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Intro Section */
 .intro {
   position: relative;
   height: 100vh;
@@ -97,7 +93,6 @@
   animation: scroll 2s infinite;
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -123,7 +118,6 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .upper-left-text {
     font-size: 1rem;
