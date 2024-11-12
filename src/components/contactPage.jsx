@@ -9,8 +9,8 @@ import {
   Grid,
   useMediaQuery,
 } from '@mui/material';
-import Subscriptions from './path/to/Subscriptions';
 import { useTheme } from '@mui/material/styles';
+import { Subscriptions } from '@mui/icons-material';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import FacebookIcon from '@mui/icons-material/Facebook';
