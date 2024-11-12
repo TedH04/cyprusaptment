@@ -2,6 +2,7 @@
   "name": "cyprusapartment",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tedh04.github.io/cyprusaptment/",
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
@@ -46,6 +47,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.2.0"
   }
 }
