@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Grid, Typography, Card, Dialog, useMediaQuery } from '@mui/material';
+import { Grid, Typography, Card, Dialog, useMediaQuery, IconButton } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import { useTheme } from '@mui/material/styles';
 import './styling/slidersection.css';
+import CloseIcon from '@mui/icons-material/Close';
 import Balcony from './images/imgslider/Apartment/Balcony.jpeg';
 import Bed from './images/imgslider/Apartment/Bed.jpeg';
 import Bathroom from './images/imgslider/Apartment/Bathroom.jpeg';
@@ -53,27 +54,24 @@ export const SliderSection = () => {
     setOpen(true);
   };
 
-  const toggleDialog = (event) => {
-    event.stopPropagation();
-    setOpen(!open);
+  const handleClose = () => {
+    setOpen(false);
   };
 
-  /*const renderCarouselItem = (item, index, set) => (
-    <Card onClick={(event) => showImage(event, index, set)} className="carousel-card">
-      <img src={item.url} alt={item.caption} className="carousel-image" />
-    </Card>
-  );*/
-
   return (
-    <div>
-      <Grid container spacing={3} justifyContent="center">
+    <div className="slider-section">
+      <Grid container spacing={4} justifyContent="center">
         <Grid item xs={12} md={6}>
           <Typography variant="h5" className="typography-h5" gutterBottom>
-            Inside the House
+            Inside the Apartment
           </Typography>
-          <Carousel animation="slide" autoPlay={false}>
+          <Carousel animation="slide" autoPlay={false} navButtonsAlwaysVisible>
             {insideImages.map((item, index) => (
-              <Card key={index} onClick={() => showImage(index, 'inside')} className="carousel-card">
+              <Card
+                key={index}
+                onClick={() => showImage(index, 'inside')}
+                className="carousel-card"
+              >
                 <img src={item.url} alt={item.caption} className="carousel-image" />
               </Card>
             ))}
@@ -81,37 +79,51 @@ export const SliderSection = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant="h5" className="typography-h5" gutterBottom>
-            Outside View
+            Outside Views
           </Typography>
-          <Carousel animation="slide" autoPlay={false}>
+          <Carousel animation="slide" autoPlay={false} navButtonsAlwaysVisible>
             {outsideImages.map((item, index) => (
-              <Card key={index} onClick={() => showImage(index, 'outside')} className="carousel-card">
+              <Card
+                key={index}
+                onClick={() => showImage(index, 'outside')}
+                className="carousel-card"
+              >
                 <img src={item.url} alt={item.caption} className="carousel-image" />
               </Card>
             ))}
           </Carousel>
         </Grid>
       </Grid>
+
+      {/* Dialog for full-size images */}
       <Dialog
         fullScreen={isMobile}
         open={open}
-        onClose={() => setOpen(false)}
+        onClose={handleClose}
         PaperProps={{
           style: {
-            width: isMobile ? '100%' : '80%',
-            height: isMobile ? '100%' : '80%',
-            maxWidth: 'none',
-            backgroundColor: 'transparent',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
           },
         }}
       >
+        <IconButton
+          aria-label="close"
+          onClick={handleClose}
+          style={{
+            position: 'absolute',
+            top: 10,
+            right: 10,
+            color: '#fff',
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
         <Carousel
           animation="slide"
           autoPlay={false}
           index={currentIndex}
           navButtonsAlwaysVisible
-          navButtonsProps={{
-          }}
+          indicators={false}
         >
           {(currentSet === 'inside' ? insideImages : outsideImages).map((item, i) => (
             <img
@@ -119,12 +131,10 @@ export const SliderSection = () => {
               src={item.url}
               alt={item.caption}
               className="modal-carousel-image"
-              onClick={toggleDialog}
             />
           ))}
         </Carousel>
       </Dialog>
     </div>
   );
-  
 };

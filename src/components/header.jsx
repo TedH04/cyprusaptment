@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Header as SemanticHeader } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import './styling/header.css';
 
 export const Header = () => {
@@ -10,9 +10,12 @@ export const Header = () => {
           <div className="upper-left-text">Hotels Selection</div>
           <div className="textsContainer">
             <p className="intro-text">A Great Place To Stay</p>
-            <SemanticHeader as='h1' inverted>
-            🇨🇾Välkommen till , Our dreamplace in Paradise- North Cyprus 🇨🇾!
-            </SemanticHeader>
+            <h1 className="main-title">
+              🇨🇾 Välkommen till Our Dream Place in Paradise - North Cyprus 🇨🇾
+            </h1>
+          </div>
+          <div className="scroll-indicator">
+            <span></span>
           </div>
         </Container>
       </div>

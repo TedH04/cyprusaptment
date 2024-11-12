@@ -1,259 +1,103 @@
-.MuiCard-root {
-  border: none !important;
-  box-shadow: none !important;
-  background-color: transparent !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
+/* slidersection.css */
+
+/* Reset some default styles */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
 }
 
 body {
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   line-height: 1.5;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+  background-color: #f5f5f5; /* Light grey background for contrast */
 }
 
-.grid-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+/* Container for the entire section */
+.slider-section {
+  padding: 2rem 1rem;
+  background-color: #fff; /* White background for content */
 }
 
+/* Typography styles */
 .typography-h5 {
-  margin: 20px 0;
-  font-size: 1.5rem;
-  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  font-weight: 500;
   text-align: center;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+  color: #333;
 }
 
+/* Carousel card styles */
 .carousel-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin: auto;
+  position: relative;
   overflow: hidden;
-  box-shadow: none;
+  border-radius: 8px;
+  cursor: pointer;
   transition: transform 200ms ease-in-out;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  
+  aspect-ratio: 16 / 10; /* Set desired aspect ratio */
 }
+
 
 .carousel-card:hover,
 .carousel-card:focus-visible {
-  transform: scale(1.05);
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+  transform: scale(1.02);
 }
 
+/* Image styles */
 .carousel-image {
-  max-width: 100%; 
-  max-height: 60vh; 
-  object-fit: contain;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   display: block;
-  transition: object-fit 300ms ease-in-out;
-  border: none;
-  box-shadow: none;
-  margin-bottom: 0; 
-  padding-bottom: 0;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+  transition: opacity 300ms ease-in-out;
 }
 
+.carousel-card:hover .carousel-image {
+  opacity: 0.9;
+}
+
+/* Dialog image styles */
 .modal-carousel-image {
-  display: block;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   max-height: 80vh;
   object-fit: contain;
-  margin: auto;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
 }
-
-.dialog-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.carousel-image,
+.modal-carousel-image {
   width: 100%;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+  height: 100%;
+  object-fit: cover;
 }
-
-.skip-link {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.skip-link:focus-visible {
-  top: 0;
-  left: 0;
-  border: 1px solid black;
-  background-color: white;
-  padding: 0.5rem;
-  width: auto;
-  height: auto;
-  margin: 0;
-  clip: unset;
-  text-decoration: none;
-  color: black;
-  z-index: 100;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
+/* Responsive Typography */
 @media (max-width: 768px) {
-  .carousel-card {
-    width: 100%; 
-    height: 300px; 
-    margin: 0 auto; 
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-  }
-
-  .carousel-image, 
-  .modal-carousel-image {
-    max-height: 32vh;
-    width: auto; 
-    margin: auto; 
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-  }
-
-  .your-outer-container-class { 
-    width: 100%; 
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-  }
-
   .typography-h5 {
-    font-size: 1.2rem;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
+    font-size: 1.5rem;
   }
 }
 
-/* Animation for Buttons */
-@keyframes squish {
-  50% {
-    scale: 1.4 0.6;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-  }
+/* Custom navigation buttons */
+.MuiButtonBase-root {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: #fff !important;
 }
 
-/* Animation and Interaction Styles for Buttons */
-.img-slider-btn,
-.img-slider-dot-btn {
-  all: unset;
-  display: block;
-  cursor: pointer;
-  transition: background-color 100ms ease-in-out, scale 100ms ease-in-out;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+.MuiButtonBase-root:hover {
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
-.img-slider-btn {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  padding: 1rem;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+/* Dot indicators */
+.MuiMobileStepper-dots {
+  gap: 8px;
 }
 
-.img-slider-btn:hover,
-.img-slider-btn:focus-visible {
-  background-color: rgba(0, 0, 0, 0.2);
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+.MuiMobileStepper-dot {
+  background-color: #ccc;
 }
 
-.img-slider-btn > * {
-  stroke: white;
-  fill: black;
-  width: 2rem;
-  height: 2rem;
-  animation: squish 200ms ease-in-out;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.img-slider-dot-btn {
-  width: 1rem;
-  height: 1rem;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.img-slider-dot-btn:hover,
-.img-slider-dot-btn:focus-visible {
-  scale: 1.2;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.img-slider-dot-btn > * {
-  stroke: white;
-  fill: black;
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.img-slider-dot-btn:focus-visible,
-.img-slider-btn:focus-visible {
-  outline: auto;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+.MuiMobileStepper-dotActive {
+  background-color: #333;
 }

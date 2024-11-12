@@ -1,30 +1,45 @@
+/* apartmentDescription.css */
+
+/* Container styling */
 .apartment-description {
-  background: #fff;
-  padding: 2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  background: #f0f4f8;
+  padding: 2rem 1rem;
   margin-top: 30px;
-  line-height: 1.6;
 }
 
-.apartment-description h2, .apartment-description h3 {
-  color: #333;
+/* Card styling */
+.description-card {
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
 }
 
-.apartment-description .ui.segment {
-  padding: 1em;
-  background: #f9f9f9;
-  border: none;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  margin-top: 1rem;
+/* Card content */
+.description-card .MuiCardContent-root {
+  padding: 2rem;
 }
 
+/* Headings */
+.description-card h5 {
+  color: #1a237e;
+  font-weight: 600;
+}
+
+/* Paragraph text */
+.description-card p {
+  line-height: 1.8;
+  color: #424242;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .apartment-description {
     padding: 1rem;
   }
-  
-  .apartment-description .ui.segment {
-    padding: 0.5em;
+
+  .description-card .MuiCardContent-root {
+    padding: 1.5rem;
   }
 }
