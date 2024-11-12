@@ -7,9 +7,9 @@ import {
   Box,
   IconButton,
   Grid,
-  useMediaQuery,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import { Subscriptions } from '@mui/icons-material';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -17,7 +17,6 @@ import './styling/contactPage.css';
 
 export const ContactPage = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <footer
@@ -68,9 +67,8 @@ export const ContactPage = () => {
             xs={12}
             md={6}
             container
-            justifyContent={isMobile ? 'center' : 'flex-end'}
           >
-            <Box textAlign={isMobile ? 'center' : 'right'}>
+            <Box>
               <Typography variant="h6" gutterBottom>
                 Följ oss
               </Typography>
